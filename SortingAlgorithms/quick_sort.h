@@ -1,32 +1,28 @@
-// stdafx.h : include file for standard system include files,
-// or project specific include files that are used frequently, but
-// are changed infrequently
-//
-
 #pragma once
+// Header files
+#ifndef quick_sort_h_
+#define quick_sort_h_
+/******************************************************************************
+*
+* @file     SelectionSort.h
+* @brief
+* @version  V1.00
+* @date     March 10,2020
+*
+* @note
+*
+******************************************************************************/
+
 /*----------------------------------------------------------------------------
 *
 * Include any additional header files that are needed to compile this
 * header file here.
 *
 *----------------------------------------------------------------------------*/
-// TODO: reference additional headers your program requires here
-#include "targetver.h"
 
-#include "selection_sort.h"
-#include "bubble_sort.h"
-#include "merge_sort.h"
-#include "quick_sort.h"
-
-#include <iostream>
-#include <stdio.h>
-#include <tchar.h>
-#include <stdlib.h>
-#include <time.h>
-
-
-
-
+/*-----------------------------------------------------------------------------
+Meaningful name that describes what is about to follow
+-----------------------------------------------------------------------------*/
 
 
 /*----------------------------------------------------------------------------
@@ -53,11 +49,12 @@
 * Place function prototypes that need to be seen by multiple source files here.
 *
 *----------------------------------------------------------------------------*/
-int ascending(int, int);
-int descending(int, int);
 
+// ReturnedDataType functionName(ParametersDataType)
+int quick_sort(int *, int);
 /*----------------------------------------------------------------------------
 *
 * End of file.
 *
 *----------------------------------------------------------------------------*/
+#endif

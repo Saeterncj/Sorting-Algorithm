@@ -1,23 +1,15 @@
+/// C file layout
 
 /******************************************************************************
 *
-* @file     shared_data.c
-* @brief    stdafx.cpp : source file that includes just the standard includes
-*           SortingAlgorithms.pch will be the pre-compiled header stdafx.obj will 
-*           contain the pre-compiled type information
+* @file     selection_sort.cpp
+* @brief    file for selection sort algorithm.
 * @version  V1.00
-* @date     8, December 2018
+* @date     March 10, 2020
 *
 * @note
 *
 ******************************************************************************/
-
-#include "stdafx.h"
-
-// TODO: reference any additional headers you need in STDAFX.H
-// and not in this file
-
-
 
 /*----------------------------------------------------------------------------
 *
@@ -25,6 +17,7 @@
 *
 *----------------------------------------------------------------------------*/
 
+#include "stdafx.h"
 /*----------------------------------------------------------------------------
 *
 * Place function prototypes that will be used only by this file here.
@@ -65,10 +58,17 @@
 * Place function bodies here.
 *
 *----------------------------------------------------------------------------*/
-// function callbacks
-int ascending(int a, int b) {
-	return a - b;
-}
-int descending(int a, int b) {
-	return b - a;
+
+void selection_sort(int *p, int size, int (*compare)(int,int)) {
+	for (int i = 0; i < size - 1; i++) {
+		int element = i;
+		for (int j(i+1); j < size; j++) {
+			if (compare(p[element],p[j]) > 0)
+				element = j;
+		}
+		int temp = p[i];
+		p[i] = p[element];
+		p[element] = temp;
+	}
+	std::cout << "\n";
 }

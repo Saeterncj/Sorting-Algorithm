@@ -1,23 +1,15 @@
+/// C file layout
 
 /******************************************************************************
 *
-* @file     shared_data.c
-* @brief    stdafx.cpp : source file that includes just the standard includes
-*           SortingAlgorithms.pch will be the pre-compiled header stdafx.obj will 
-*           contain the pre-compiled type information
+* @file     bubble_sort.cpp
+* @brief    file for bubble sort algorithm.  
 * @version  V1.00
-* @date     8, December 2018
+* @date     March 10, 2020
 *
 * @note
 *
 ******************************************************************************/
-
-#include "stdafx.h"
-
-// TODO: reference any additional headers you need in STDAFX.H
-// and not in this file
-
-
 
 /*----------------------------------------------------------------------------
 *
@@ -25,6 +17,7 @@
 *
 *----------------------------------------------------------------------------*/
 
+#include "stdafx.h"
 /*----------------------------------------------------------------------------
 *
 * Place function prototypes that will be used only by this file here.
@@ -65,10 +58,23 @@
 * Place function bodies here.
 *
 *----------------------------------------------------------------------------*/
-// function callbacks
-int ascending(int a, int b) {
-	return a - b;
-}
-int descending(int a, int b) {
-	return b - a;
+int bubble_sort(int * p, int size, int (*compare)(int,int)) {
+
+	while (size-- > 1) {
+		int flag = 1;
+		for (int i = 0; i < size; i++) {
+			if (compare(p[i],p[i + 1]) > 0) {
+				int temp = p[i];
+				p[i] = p[i + 1];
+				p[i + 1] = temp;
+				flag = 0;
+			}
+		}
+		if (flag) {
+			std::cout << "We broke out\n";
+			break;
+		}
+	}
+
+	return 0;
 }
