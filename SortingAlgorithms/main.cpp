@@ -31,9 +31,10 @@ int main()
 	for (int i = 0; i < size; i++) {
 		std::cout << p[i] << std::endl;
 	}
-	selection_sort(p,size,ascending);
-	bubble_sort(p, size,ascending);
-	printArray(p, size);
+	//selection_sort(p,size,ascending);
+	//bubble_sort(p, size,ascending);
+	insertion_sort(p, size, descending);
+	printArray(p, size); 
     return 0;
 	
 }

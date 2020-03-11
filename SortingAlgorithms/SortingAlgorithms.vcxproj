@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bubble_sort.h" />
+    <ClInclude Include="insertion_sort.h" />
     <ClInclude Include="merge_sort.h" />
     <ClInclude Include="quick_sort.h" />
     <ClInclude Include="selection_sort.h" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bubble_sort.cpp" />
+    <ClCompile Include="insertion_sort.cpp" />
     <ClCompile Include="merge_sort.cpp" />
     <ClCompile Include="quick_sort.cpp" />
     <ClCompile Include="selection_sort.cpp" />

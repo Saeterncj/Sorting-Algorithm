@@ -17,6 +17,8 @@
 #include "bubble_sort.h"
 #include "merge_sort.h"
 #include "quick_sort.h"
+#include "insertion_sort.h"
+
 
 #include <iostream>
 #include <stdio.h>

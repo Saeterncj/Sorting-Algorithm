@@ -61,17 +61,17 @@
 int bubble_sort(int * p, int size, int (*compare)(int,int)) {
 
 	while (size-- > 1) {
-		int flag = 1;
+		int sorted_flag = 1;
 		for (int i = 0; i < size; i++) {
 			if (compare(p[i],p[i + 1]) > 0) {
 				int temp = p[i];
 				p[i] = p[i + 1];
 				p[i + 1] = temp;
-				flag = 0;
+				sorted_flag = 0;
 			}
 		}
-		if (flag) {
-			std::cout << "We broke out\n";
+		if (sorted_flag) {
+			std::cout << "Already Sorted\n";
 			break;
 		}
 	}
