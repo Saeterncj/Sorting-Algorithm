@@ -33,7 +33,8 @@ int main()
 	}
 	//selection_sort(p,size,ascending);
 	//bubble_sort(p, size,ascending);
-	insertion_sort(p, size, descending);
+	//insertion_sort(p, size, descending);
+	merge_sort(p, size,ascending);
 	printArray(p, size); 
     return 0;
 	

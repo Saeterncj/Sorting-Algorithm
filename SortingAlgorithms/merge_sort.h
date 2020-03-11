@@ -51,7 +51,7 @@ Meaningful name that describes what is about to follow
 *----------------------------------------------------------------------------*/
 
 // ReturnedDataType functionName(ParametersDataType)
-void merge_sort(int *, int);
+void merge_sort(int *, int, int(*)(int, int));
 /*----------------------------------------------------------------------------
 *
 * End of file.
