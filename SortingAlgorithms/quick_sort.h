@@ -51,7 +51,7 @@ Meaningful name that describes what is about to follow
 *----------------------------------------------------------------------------*/
 
 // ReturnedDataType functionName(ParametersDataType)
-int quick_sort(int *, int);
+void quick_sort(int *, int, int, int (*)(int,int));
 /*----------------------------------------------------------------------------
 *
 * End of file.

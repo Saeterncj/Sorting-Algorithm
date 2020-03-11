@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#define MAXRANDVALUE 100
+#define MAXRANDVALUE 20
 
 int * generate_random_numbers(int size) {
 	srand(time(NULL));
@@ -34,7 +34,8 @@ int main()
 	//selection_sort(p,size,ascending);
 	//bubble_sort(p, size,ascending);
 	//insertion_sort(p, size, descending);
-	merge_sort(p, size,ascending);
+	//merge_sort(p, size,ascending);
+	quick_sort(p,0,size - 1,descending);
 	printArray(p, size); 
     return 0;
 	

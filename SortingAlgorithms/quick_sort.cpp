@@ -58,3 +58,34 @@
 * Place function bodies here.
 *
 *----------------------------------------------------------------------------*/
+template<typename T>
+void swap(T &a, T &b)
+{
+	T t = a;
+	a = b;
+	b = t;
+}
+
+int partition(int * p, int start, int end, int(*compare)(int, int)) {
+	int pivot_v = p[end];
+	int pivot_i = start;
+	for (int i(start); i < end ; i++) {
+		if (compare(p[i], pivot_v) <= 0) {
+			/*int temp = p[i];
+			p[i] = p[pivot_i];
+			p[pivot_i++] = temp;*/
+			swap(p[i], p[pivot_i]);
+			pivot_i++;
+		}
+	}
+	swap(p[pivot_i], p[end]);
+	return pivot_i;
+}
+void quick_sort(int *p, int start, int end, int(*compare)(int, int)) {
+	int pivot_i ;
+	if (start >= end) return; 
+	pivot_i = partition(p, start,end, compare);
+	quick_sort(p, start, pivot_i-1, compare);
+	quick_sort(p, pivot_i + 1, end, compare);
+	
+}
